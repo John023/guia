@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git, primeros pasos</title>
+</head>
+<style>
+    body{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 21px;
+    }
+    div{
+        margin-right: 17px;
+        padding-top: 20px;
+    }
+    code{
+        background-color: rgba(253, 232, 232, 0.856);
+    }
+</style>
+
+<body>
+
+    <center><h1>Pasos para empezar a utilizar Git en un Proyecto:</h1></center>
+
+    <hr>
+    
+    <div>
+
+        <ol>
+
+            <li><code>$<strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
+
+            Al ejecutar éste comando, se creará automáticamente una carpeta en el proyecto llamda <i>.git</i> (olculta por defecto); es la carpeta encargada de administrar todos los cambios de tu código, pero no vas a tener que tocar nada de esa carpeta.</li>
+
+            <br>
+
+            <li><code>$ <strong>git status</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
+
+            <br>
+
+            <li><code>$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u>Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (Ej:  <code><i>git add .</i></code>)</li>
+
+        </ol>
+
+    </div>
+
+</body>
+
+</html>
