@@ -21,33 +21,49 @@
 
         <ol>
 
-            <li><code>$<strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
+            <li><code class="command">$<strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
 
             Al ejecutar éste comando, se creará automáticamente una carpeta en el proyecto llamda <i>.git</i> (olculta por defecto); es la carpeta encargada de administrar todos los cambios del código, pero no vamos a tocar nada de esa carpeta. <br><br> <strong>Nota:</strong> El comando se ejecuta una sola vez por proyecto.</li>
 
             <br><br>
 
-            <li><code>$ <strong>git status -s</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
+            <li><code class="command">$ <strong>git status -s</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
 
             <br><br>
 
-            <li><code>$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
+            <li><code class="command">$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
 
             <br><br>
 
-            <li><code>$ <strong>git commit -m "<i>mensaje del commit</i>"</strong></code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
+            <li><code class="command">$ <strong>git commit -m</strong> "<i>mensaje del commit</i>"</code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
 
             <br><br>
 
-            <li><code>$ <strong>git log --oneline</strong></code> - <strong>Para ver todos los commits que hemos creado.</strong></li>
+            <li><code class="command">$ <strong>git log --oneline</strong></code> - <strong>Para ver todos los commits que hemos creado.</strong></li>
 
             <br><br>
 
-            <li><code>$ <strong>git push</strong></code> - <strong>Para enviar los cambios hechos en el código al repositorio remoto:</strong> Éste comando permite subir los cambios hechos (y guardados en <strong>Staging area</strong>) al repositorio remoto <strong><u>GitHub</u></strong>.</li>
+            <li><code class="command">$ <strong>git push</strong></code> - <strong>Para enviar los cambios hechos en el código al repositorio remoto:</strong> Éste comando permite subir los cambios hechos (y guardados en <strong>Staging area</strong>) al repositorio remoto <strong><u>GitHub</u></strong>.</li>
 
             <br><br>
 
-            <li><code>$ <strong>git reset --hard «ID del commit»</strong></code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees</li>
+            <li><code class="command">$ <strong>git reset --hard</strong> «ID del commit»</code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees</li>
+
+        </ol>
+
+    </div>
+
+    <div>
+
+        <h2>Pasos para versionar el proyecto con <strong>TAGS</strong></h2>
+
+        <ol>
+
+            <li><code class="command"><strong>git tag «</strong>nombreDeLaVersión<strong>»</strong> <strong>-m</strong> "<i>descripción de la versión</i>"</code> - Para crear una nueva versión del proyecto. <br><br> Ej: <code>git tag v1.0 -m "primera version"</code></li>
+
+            <br><br>
+
+            <li><code class="command"><strong>git push --tags</strong></code> - Guarda esa versión creada en el repositorio.</li>
 
         </ol>
 

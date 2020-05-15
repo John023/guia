@@ -1,11 +1,12 @@
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 21px;
+    padding: 0 20px;
 }
 div{
     margin-right: 17px;
     padding: 20px 0;
 }
-code{
+code.command{
     background-color: rgba(214, 199, 199, 0.644);
 }
