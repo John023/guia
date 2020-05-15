@@ -1,1 +1,1 @@
-console.log('Hello word');
+console.log('Adding more js in the project');
