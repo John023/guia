@@ -67,7 +67,11 @@
 
             <br><br>
 
-            <li><code class=""><strong>git branch</strong></code> - Éste comando nos permite ver todas las ramas que hemos creado o que tenemos en el proyecto, y nos indica en cuál rama estamos trabajando actualmente.</li>
+            <li><code class="command"><strong>git branch</strong></code> - Éste comando nos permite ver todas las ramas que hemos creado o que tenemos en el proyecto, y nos indica en cuál rama estamos trabajando actualmente.</li>
+
+            <br><br>
+
+            <li><code class="command"><strong>git merge </strong> «nombre de la Rama a fusionar»</code> - Una vez tengamos listos los cambios de la rama en la que estemos trabajando, y estemos seguros de querer agregarlos a la rama principal del proyecto, para seguir el orden en la misma línea del tiempo actualizado, ejecutamos el comando: <strong>git merge «</strong>nombre de la Rama<strong>»</strong>. <br> Antes de ejecutar éste comando, debemos haber previamente guardado los cambios en la rama que vamos a fusionar, es decir, ya tener listo el <i>git add</i> y el commit realizado. Una vez esté el commit hecho, <strong>cambiamos a la rama <u>máster</u></strong> (<code><u>git checkout master</u></code>) y ahora si ejecutamos el merge: <code><strong>git merge</strong> «nombre de la Rama a fusionar»</code>. <br><br> Ej: <ol><li><code>git checkout master</code></li><li><code>git merge nuevaRama</code></li></ol></li>
 
         </ol>
 
