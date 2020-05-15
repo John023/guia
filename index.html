@@ -4,20 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git, primeros pasos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-<style>
-    body{
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        font-size: 21px;
-    }
-    div{
-        margin-right: 17px;
-        padding-top: 20px;
-    }
-    code{
-        background-color: rgba(253, 232, 232, 0.856);
-    }
-</style>
 
 <body>
 
@@ -27,19 +15,35 @@
     
     <div>
 
+        Una vez ya tengas tu proyecto con sus respectivos archivos, sigue éstos pasos:
+
+        <br><br>
+
         <ol>
 
             <li><code>$<strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
 
-            Al ejecutar éste comando, se creará automáticamente una carpeta en el proyecto llamda <i>.git</i> (olculta por defecto); es la carpeta encargada de administrar todos los cambios de tu código, pero no vas a tener que tocar nada de esa carpeta.</li>
+            Al ejecutar éste comando, se creará automáticamente una carpeta en el proyecto llamda <i>.git</i> (olculta por defecto); es la carpeta encargada de administrar todos los cambios del código, pero no vamos a tocar nada de esa carpeta. <br><br> <strong>Nota:</strong> El comando se ejecuta una sola vez por proyecto.</li>
 
-            <br>
+            <br><br>
 
-            <li><code>$ <strong>git status</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
+            <li><code>$ <strong>git status -s</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
 
-            <br>
+            <br><br>
 
-            <li><code>$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u>Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (Ej:  <code><i>git add .</i></code>)</li>
+            <li><code>$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
+
+            <br><br>
+
+            <li><code>$ <strong>git commit -m "<i>mensaje del commit</i>"</strong></code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
+
+            <br><br>
+
+            <li><code>$ <strong>git log --oneline</strong></code> - <strong>Para ver todos los commits que hemos creado.</strong></li>
+
+            <br><br>
+
+            <li><code>$ <strong>git reset --hard «ID del commit»</strong></code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees</li>
 
         </ol>
 
