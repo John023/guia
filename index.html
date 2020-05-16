@@ -21,33 +21,37 @@
 
         <ol>
 
-            <li><code class="command">$<strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
+            <li><code class="command"><strong> git init</strong></code> - <strong>Inicializar un proyecto nuevo con Git (ejecutar el comando en la carpeta raíz del proyecto):</strong> Con éste comando le decimos a nuestro proyecto que vamos a empezar a utilizar <strong>Git</strong> para <strong><u>controlar sus versiones</u>.</strong>
 
             Al ejecutar éste comando, se creará automáticamente una carpeta en el proyecto llamda <i>.git</i> (olculta por defecto); es la carpeta encargada de administrar todos los cambios del código, pero no vamos a tocar nada de esa carpeta. <br><br> <strong>Nota:</strong> El comando se ejecuta una sola vez por proyecto.</li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git status -s</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
+            <li><code class="command"><strong>git status -s</strong></code> - <strong>Para ver el estado de nuestros archivos:</strong> Éste comando te permite ver que archivos tienes trabajando, es decir, permite ver los archivos que tienes o los archivos que estás trabajando y que quizá aún no los haz agregado al staging area (es decir, que están por ahí volando).</li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
+            <li><code class="command"><strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git commit -m</strong> "<i>mensaje del commit</i>"</code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
+            <li><code class="command"><strong>git commit -m</strong> "<i>mensaje del commit</i>"</code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git log --oneline</strong></code> - <strong>Para ver todos los commits que hemos creado.</strong></li>
+            <li><code class="command"><strong>git log --oneline</strong></code> - <strong>Para ver todos los commits que hemos creado.</strong></li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git push</strong></code> - <strong>Para enviar los cambios hechos en el código al repositorio remoto:</strong> Éste comando permite subir los cambios hechos (y guardados en <strong>Staging area</strong>) al repositorio remoto <strong><u>GitHub</u></strong>.</li>
+            <li><code class="command"><strong>git push</strong></code> - <strong>Para enviar los cambios hechos en el código al repositorio remoto:</strong> Éste comando permite subir los cambios hechos (y guardados en <strong>Staging area</strong>) al repositorio remoto <strong><u>GitHub</u></strong>.</li>
 
             <br><br>
 
-            <li><code class="command">$ <strong>git reset --hard</strong> «ID del commit»</code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees.</li>
+            <li><code class="command"><strong>git pull</strong></code> - Cuando realizamos cambios directamente en github pero no de forma local, es esencial realizar un pull, donde descargaremos los cambios realizados para seguir trabajando normalmente. <br><br> <strong>Nota:</strong> Es importante estar enlazados remotamente, puedes verificar con: <code class="command">git remote -v</code>, luego ejecuta: <strong>git pull</strong>.</li>
+
+            <br><br>
+
+            <li><code class="command"><strong>git reset --hard</strong> «ID del commit»</code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees.</li>
 
         </ol>
 
@@ -59,11 +63,11 @@
 
         <ol>
 
-            <li><code class="command"><strong>git branch</strong> «nombreDeLaRama»</code> - <strong>Crear una nueva rama:</strong> Éste comando permite crear una nueva rama aparte de la rama máster, o mejor dicho, crea una nueva línea del tiempo, o una copia de la rama máster para trabajar en paralelo a la rama máster. <br><br> Ej: <code>git branch testBranch</code> </li>
+            <li><code class="command"><strong>git branch</strong> «nombreDeLaRama»</code> - <strong>Crear una nueva rama:</strong> Éste comando permite crear una nueva rama aparte de la rama máster, o mejor dicho, crea una nueva línea del tiempo, o una copia de la rama máster para trabajar en paralelo a la rama máster. <br><br> Ej: <code class="command">git branch testBranch</code>.</li>
 
             <br><br>
 
-            <li><code class="command"><strong>git checkout</strong> «nombreDeLaRama»</code> - <strong>Cambiar a la rama indicada:</strong> Para cambiar de ramas o movernos entre ellas. Éste comando nos permite <strong>movernos</strong> o mejor dicho cambiarnos a la rama que hayamos creado con ese nombre, para trabajar en la susodicha. <br><br> Ej: <code>git checkout testBranch</code></li>
+            <li><code class="command"><strong>git checkout</strong> «nombreDeLaRama»</code> - <strong>Cambiar a la rama indicada:</strong> Para cambiar de ramas o movernos entre ellas. Éste comando nos permite <strong>movernos</strong> o mejor dicho cambiarnos a la rama que hayamos creado con ese nombre, para trabajar en la susodicha. <br><br> Ej: <code class="command">git checkout testBranch</code>.</li>
 
             <br><br>
 
@@ -71,11 +75,23 @@
 
             <br><br>
 
-            <li><code class="command"><strong>git merge </strong> «nombreDeLaRamaPorFusionar»</code> - <strong>Unir o combinar ramas:</strong> Una vez tengamos listos los cambios de la rama en la que estemos trabajando, y estemos seguros de querer agregarlos a la rama principal del proyecto, para seguir el orden en la misma línea del tiempo actualizado, ejecutamos el comando: <strong>git merge «</strong>nombre de la Rama<strong>»</strong>. <br> Antes de ejecutar éste comando, debemos haber previamente guardado los cambios en la rama que vamos a fusionar, es decir, ya tener listo el <i>git add</i> y el commit realizado. Una vez esté el commit hecho, <strong>cambiamos a la rama <u>máster</u></strong> (<code><u>git checkout master</u></code>) y ahora si ejecutamos el merge: <code><strong>git merge</strong> «nombre de la Rama a fusionar»</code>. <br><br> Ej: <ol><li><code>git checkout master</code></li><li><code>git merge testBranch</code></li></ol></li>
+            <li><code class="command"><strong>git merge </strong> «nombreDeLaRamaPorFusionar»</code> - <strong>Unir o combinar ramas:</strong> Una vez tengamos listos los cambios de la rama en la que estemos trabajando, y estemos seguros de querer agregarlos a la rama principal del proyecto, para seguir el orden en la misma línea del tiempo actualizado, ejecutamos el comando: <strong>git merge «</strong>nombre de la Rama<strong>»</strong>. <br> Antes de ejecutar éste comando, debemos haber previamente guardado los cambios en la rama que vamos a fusionar, es decir, ya tener listo el <i>git add</i> y el commit realizado. Una vez esté el commit hecho, <strong>cambiamos a la rama <u>máster</u></strong> (<code class="command"><u>git checkout master</u></code>) y ahora si ejecutamos el merge: <code class="command"><strong>git merge</strong> «nombre de la Rama a fusionar»</code>. <br><br> Ej: <ol><li><code>git checkout master</code></li><li><code>git merge testBranch</code></li></ol></li>
 
             <br><br>
 
-            <li><code class="command"><strong>git branch -d</strong> «nombreDeLaRamaPorEliminar»</code> - <strong>Para eliminar la rama que deseemos de git:</strong> Si tenemos una rama que ya no vayamos a seguir trabajando o que ya no nos interese, la podemos eliminar con el comando <strong>git branch -d</strong>. <br><br> Ej: <code>git branch -d testBranch</code> </li>
+            <li><code class="command"><strong>git branch -d</strong> «nombreDeLaRamaPorEliminar»</code> - <strong>Para eliminar la rama que deseemos de git:</strong> Si tenemos una rama que ya no vayamos a seguir trabajando o que ya no nos interese, la podemos eliminar con el comando <strong>git branch -d</strong>. <br><br> Ej: <code class="command">git branch -d testBranch</code>.</li>
+
+        </ol>
+
+    </div>
+
+    <div>
+
+        <h2>Fetch</h2>
+
+        <ol>
+
+            <li><strong><code class="command">git fetch</code></strong> - Este comando hace la comparación de nuestros archivos locales con los del servidor, si existiera alguna diferencia nos pediría realizar un get pull para realizar un match de nuestros arhivos locales.</li>
 
         </ol>
 
@@ -87,7 +103,7 @@
 
         <ol>
 
-            <li><code class="command"><strong>git tag «</strong>nombreDeLaVersión<strong>»</strong> <strong>-m</strong> "<i>descripción de la versión</i>"</code> - Para crear una nueva versión del proyecto. <br><br> Ej: <code>git tag v1.0 -m "primera version"</code></li>
+            <li><code class="command"><strong>git tag «</strong>nombreDeLaVersión<strong>»</strong> <strong>-m</strong> "<i>descripción de la versión</i>"</code> - Para crear una nueva versión del proyecto. <br><br> Ej: <code class="command">git tag v1.0 -m "primera version"</code>.</li>
 
             <br><br>
 
@@ -99,23 +115,105 @@
 
     <div>
 
+        <h2>Pasos para clonar un repositorio</h2>
+
+        <ol>
+
+            <li><strong><code class="command">git clone https://github.com/John023/RepasoDeGit.git «nombreCarpeta»</code></strong> - Para descargar un repositorio completo basta con tomar la url ej: https://github.com/John023/RepasoDeGit.git y ejecutar el siguiente comando en alguna carpeta de su computadora.</li>
+
+        </ol>
+
+    </div>
+
+    <div>
+
+        <h2>Fork</h2>
+
+        <ul>
+
+            <li>El <strong>fork</strong> que nos permite hacer GitHub es muy similar al <strong>git clone</strong> con la ventaja de que en lugar de clonar el repositorio de forma local, podremos crear una copia en <strong>remoto</strong> del proyecto que queremos y quedará almacenada en nuestra cuenta personal de GitHub.</li>
+
+        </ul>
+
+        Pasos para hacer un <strong>Fork</strong>:
+
+        <br><br>
+
+        <ol>
+
+            <li>Ingresamos a la dirección del repositorio que queremos copiar. <strong>Ej</strong>: https://github.com/John023/RepasoDeGit.git</li>
+
+            <br><br>
+
+            <li>En la parte superior derecha de la pantalla podemos hacer click en el botón <button style="padding: 2.5px 10px; border-radius: 4px;"><span class="btn btn-sm btn-with-count disabled tooltipped tooltipped-sw"><svg class="octicon octicon-repo-forked v-align-text-bottom" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a1.993 1.993 0 00-1 3.72V6L5 8 3 6V4.72A1.993 1.993 0 002 1a1.993 1.993 0 00-1 3.72V6.5l3 3v1.78A1.993 1.993 0 005 15a1.993 1.993 0 001-3.72V9.5l3-3V4.72A1.993 1.993 0 008 1zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3 10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm3-10c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"></path></svg> Fork</span></button> y así de simple se creará un repositorio en nuestra cuenta de GitHub que será una <strong>copia</strong> del repositorio anterior.</li>
+
+        </ol>
+
+        <h3>Trabajando en local con un repositorio Fork:</h3>
+
+        El comportamiento de este nuevo repositorio sera el mismo de cualquier otro que hayamos creado, puede ser clonado, se pueden hacer cambios, registrar commits, etc. Ya que contamos con el repositorio remoto podemos crear una carpeta en local, iniciar git y hacer pull de los cambios, recuerda usar la url de tu nuevo proyecto. <strong>Ej</strong>: <a href="https://github.com/John023/RepasoDeGit.git" style="color: black;" target="_blank">https://github.com/John023/RepasoDeGit.git</a>.
+
+        <br><br>
+
+        <ul>
+
+            <li><img src="./assets/expos.png"/></li>
+
+            <br>
+
+            <li>De esta forma todos los cambios <strong>commits</strong> que realicemos podrán ser enviados al repositorio remoto sin ningún problema.</li>
+
+            <br>
+
+            <strong>Nota:</strong> los cambios enviados serán almacenados en nuestra copia del repositorio y no afectarán de ninguna forma el repositorio original que hemos clonado.
+
+        </ul>
+
+    </div>
+
+    <div>
+
+        <h2>Aclarando diferencias entre Clone y Fork</h2>
+
+        Con <strong><i>git clone</i></strong> podemos copiar el código de un repositorio de forma local, pero no estará conectado al repositorio de origen.
+
+        <br><br>
+
+        Con <strong><i>Fork</i></strong> podremos crear una copia en remoto de un repositorio git en nuestra cuenta de GitHub y de esa forma sera mas fácil clonar de forma local para hacer <strong><i>pull</i></strong> y <strong><i>push</i></strong> de los cambios realizados.
+
+    </div>
+
+    <div>
+
+        <h2>Pasos para subir el proyecto a <strong style="color: red;">GitHub Pages</strong> (Hosting Gratuito)</h2>
+
+        <ol>
+
+            <li><strong></strong></li>
+
+        </ol>
+
+    </div>
+
+    <div>
+
         <h2>Trucos para escribir comandos de git más rápidos</h2>
 
         <ol>
 
-            <li><strong>Crear alias globales:</strong> Con el comando: <code>git config --global alias.ponerAbreviatura "comando Original"</code> podemos crear alias de los comandos de git. <br><br> Ej: crear un alias para el comando <strong><code>git push</code></strong>: <code>git config --global alias.ps "push"</code> <br><br> Ahora, <strong>git ps</strong> es la manera más rápida y abreviada de ejecutar <strong>git push</strong>.</li>
+            <li><strong>Crear alias globales:</strong> Con el comando: <code class="command">git config --global alias.ponerAbreviatura "comando Original"</code> podemos crear alias de los comandos de git. <br><br> Ej: crear un alias para el comando <strong><code>git push</code></strong>: <code class="command">git config --global alias.ps "push"</code>. <br><br> Ahora, <strong>git ps</strong> es la manera más rápida y abreviada de ejecutar <strong>git push</strong>.</li>
 
             <br><br>
 
-            <li><strong>Ver los alias creados: </strong><code>git config --global -l</code>.</li>
+            <li><strong>Ver los alias creados: </strong><code class="command">git config --global -l</code>.</li>
 
             <br><br>
 
-            <li><strong>Realiza el add . y commit más mensaje al mismo tiempo:</strong> <code>git commit -am "más comandos agregados"</code></li>
+            <li><strong>Realiza el add . y commit más mensaje al mismo tiempo:</strong> <code class="command">git commit -am "más comandos agregados"</code>.</li>
 
             <br><br>
 
-            <li><strong>Para editar un commit, como por ej: el mensaje:</strong> <code>git commit --amend</code></li>
+            <li><strong>Para editar un commit, como por ej: el mensaje:</strong> <code class="command">git commit --amend</code>.</li>
 
         </ol>
 
@@ -147,7 +245,7 @@
 
     <footer>
 
-        <center>Más comandos y ayuda en: <a href="https://bluuweb.github.io/tutorial-github/guia/" target="_blank">Tutorial de GIT</a></center>
+        <center>Más comandos y ayuda en: <a href="https://bluuweb.github.io/tutorial-github/guia/" target="_blank">Tutorial de GIT</a> y <a href="https://styde.net/clone-y-fork-con-git-y-github/" target="_blank">Ayuda con Fork y Clone</a>.</center>
 
     </footer>
 
