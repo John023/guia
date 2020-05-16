@@ -47,7 +47,7 @@
 
             <br><br>
 
-            <li><code class="command">$ <strong>git reset --hard</strong> «ID del commit»</code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees</li>
+            <li><code class="command">$ <strong>git reset --hard</strong> «ID del commit»</code> - <strong>Para retroceder a cierta parte de la historia de commits:</strong> Éste comando permite volver al commit que le indiquemos, por si algo que modificaste en ese commit no te convenció o te equivocaste, con el comando git reset --hard puedes volver a ese commit que desees.</li>
 
         </ol>
 
@@ -59,11 +59,11 @@
 
         <ol>
 
-            <li><code class="command"><strong>git branch</strong> «nombre De La Rama»</code> - Éste comando permite crear una nueva rama aparte de la rama máster, o mejor dicho, crea una nueva línea del tiempo, o una copia de la rama máster para trabajar en paralelo a la rama máster. <br><br> Ej: <code>git branch nuevaRama</code> </li>
+            <li><code class="command"><strong>git branch</strong> «nombreDeLaRama»</code> - <strong>Crear una nueva rama:</strong> Éste comando permite crear una nueva rama aparte de la rama máster, o mejor dicho, crea una nueva línea del tiempo, o una copia de la rama máster para trabajar en paralelo a la rama máster. <br><br> Ej: <code>git branch testBranch</code> </li>
 
             <br><br>
 
-            <li><code class="command"><strong>git checkout</strong> «nombre De La Rama»</code> - Éste comando nos permite <strong>movernos</strong> o mejor dicho cambiarnos a la rama que hayamos creado con ese nombre, para trabajar en la susodicha. <br><br> Ej: <code>git checkout nuevaRama</code></li>
+            <li><code class="command"><strong>git checkout</strong> «nombreDeLaRama»</code> - <strong>Cambiar a la rama indicada:</strong> Para cambiar de ramas o movernos entre ellas. Éste comando nos permite <strong>movernos</strong> o mejor dicho cambiarnos a la rama que hayamos creado con ese nombre, para trabajar en la susodicha. <br><br> Ej: <code>git checkout testBranch</code></li>
 
             <br><br>
 
@@ -71,7 +71,11 @@
 
             <br><br>
 
-            <li><code class="command"><strong>git merge </strong> «nombre de la Rama a fusionar»</code> - Una vez tengamos listos los cambios de la rama en la que estemos trabajando, y estemos seguros de querer agregarlos a la rama principal del proyecto, para seguir el orden en la misma línea del tiempo actualizado, ejecutamos el comando: <strong>git merge «</strong>nombre de la Rama<strong>»</strong>. <br> Antes de ejecutar éste comando, debemos haber previamente guardado los cambios en la rama que vamos a fusionar, es decir, ya tener listo el <i>git add</i> y el commit realizado. Una vez esté el commit hecho, <strong>cambiamos a la rama <u>máster</u></strong> (<code><u>git checkout master</u></code>) y ahora si ejecutamos el merge: <code><strong>git merge</strong> «nombre de la Rama a fusionar»</code>. <br><br> Ej: <ol><li><code>git checkout master</code></li><li><code>git merge nuevaRama</code></li></ol></li>
+            <li><code class="command"><strong>git merge </strong> «nombreDeLaRamaPorFusionar»</code> - <strong>Unir o combinar ramas:</strong> Una vez tengamos listos los cambios de la rama en la que estemos trabajando, y estemos seguros de querer agregarlos a la rama principal del proyecto, para seguir el orden en la misma línea del tiempo actualizado, ejecutamos el comando: <strong>git merge «</strong>nombre de la Rama<strong>»</strong>. <br> Antes de ejecutar éste comando, debemos haber previamente guardado los cambios en la rama que vamos a fusionar, es decir, ya tener listo el <i>git add</i> y el commit realizado. Una vez esté el commit hecho, <strong>cambiamos a la rama <u>máster</u></strong> (<code><u>git checkout master</u></code>) y ahora si ejecutamos el merge: <code><strong>git merge</strong> «nombre de la Rama a fusionar»</code>. <br><br> Ej: <ol><li><code>git checkout master</code></li><li><code>git merge testBranch</code></li></ol></li>
+
+            <br><br>
+
+            <li><code class="command"><strong>git branch -d</strong> «nombreDeLaRamaPorEliminar»</code> - <strong>Para eliminar la rama que deseemos de git:</strong> Si tenemos una rama que ya no vayamos a seguir trabajando o que ya no nos interese, la podemos eliminar con el comando <strong>git branch -d</strong>. <br><br> Ej: <code>git branch -d testBranch</code> </li>
 
         </ol>
 
