@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Git, primeros pasos</title>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
@@ -16,6 +17,8 @@
     <div>
 
         Una vez ya tengas tu proyecto con sus respectivos archivos, sigue éstos pasos:
+
+        <button class="btnMode" id="btnMode"><span><i class="far fa-lightbulb"></i></span><span><i class="fas fa-moon"></i></span></button>
 
         <br><br>
 
@@ -31,11 +34,11 @@
 
             <br><br>
 
-            <li><code class="command"><strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>) <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
+            <li><code class="command"><strong>git add «file»</strong></code> - <strong>Para agregar un archivo al <u title="Área temporal" style="cursor: pointer;">Staging area</u>:</strong> Con éste comando, le decimos a git que archivos queremos agregar al Staging area. Podemos agregar archivo por archivo individualmente al staging area, o agregarlos todos al mismo tiempo con un punto (<strong>.</strong>) seguido de la palabra "add" (<strong><i>git add .</i></strong>). <br><br> <strong>Nota:</strong> Cada vez que crees un archivo nuevo, debdes agregarlo al staging area para ser monitoreado por git (Claro, si lo deseas agregar).</li>
 
             <br><br>
 
-            <li><code class="command"><strong>git commit -m</strong> "<i>mensaje del commit</i>"</code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
+            <li><code class="command"><strong>git commit -m</strong> "<i>mensaje del commit</i>"</code> - <strong>Para crear un primer punto de control de nuestro código:</strong> Éste comando permite empezar a versionar nuestro proyecto. A partir de aquí, ya se crea la primer versión de nuestro proyecto fija. Es como guardar una copia o una foto temporal del (o los) archivos que le hayamos indicado. <br> Si es primera vez que ejecutas éste comando, quizá git te solicite algunos datos de identificación (tu nombre, correo, etc...), ésto es para decirle a git que desarrollador es el que está haciendo los cambios.</li>
 
             <br><br>
 
@@ -215,6 +218,10 @@
 
             <li><strong>Para editar un commit, como por ej: el mensaje:</strong> <code class="command">git commit --amend</code>.</li>
 
+            <br><br>
+
+            <li><strong>Cambiar la url del repositorio remoto en local: </strong> <code class="command">git remote set-url origin <i>«urlDelRepositorio»</i></code> - Si llegáramos a cambiar de nombre el repositorio remoto, debemos cambiar la dirección de url en el local también.</li>
+
         </ol>
 
     </div>
@@ -245,9 +252,12 @@
 
     <footer>
 
-        <center>Más comandos y ayuda en: <a href="https://bluuweb.github.io/tutorial-github/guia/" target="_blank">Tutorial de GIT</a> y <a href="https://styde.net/clone-y-fork-con-git-y-github/" target="_blank">Ayuda con Fork y Clone</a>.</center>
+        <center>Más comandos y ayuda en las fuentes tomadas: <a href="https://bluuweb.github.io/tutorial-github/guia/" target="_blank">Bluuweb - Tutorial de GIT</a> y <a href="https://styde.net/clone-y-fork-con-git-y-github/" target="_blank">Ayuda con Fork y Clone</a>.</center>
 
     </footer>
+
+
+    <script src="app.js"></script>
 
 </body>
 
