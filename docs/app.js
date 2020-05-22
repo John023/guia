@@ -24,8 +24,10 @@ window.addEventListener('scroll', () => {
     if (st == 0 || st == '0' || st < 5) {
         btn.style.right = '50px';
         btn.style.top = '141px';
+        btn.style.transition = '.3s ease all';
     }else{
         btn.style.right = 0;
         btn.style.top = '45%';
+        btn.style.transition = '.3s ease all';
     }
 }, false);
