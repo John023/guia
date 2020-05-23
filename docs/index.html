@@ -191,9 +191,23 @@
 
         <h2>Pasos para subir el proyecto a <strong style="color: red;">GitHub Pages</strong> (Hosting Gratuito) <u>desde 0</u></h2>
 
+        <h5>Éstos pasos son para deploy de una aplicación con Angular</h5>
+        
         <ol>
 
-            <li><strong></strong></li>
+            <li><strong><code class="command">git remote -v</code></strong> - Confirmar la url del repositorio remoto (si deseas cambiar la url del repositorio, digita: <code class="command">git remote set-url origin https://github.com/<USERNAME>/<REPONAME>.git</code>, y luego ejecutas el <code class="command">git push -u origin master</code>)</li>
+            
+            <br><br>
+            
+            <li><strong><code class="command">npm i angular-cli-ghpages --save-dev</code>: Instalación</strong> - Instalar el paquete githubpages</li>
+            
+            <br><br>
+            
+            <li><strong><code class="command">ng build --prod --base-href https://<USERNAME>.github.io/<REPOSITORY_NAME>/</code></strong> - Verificar la url del repositorio remoto</li>
+                
+            <br><br>
+                
+            <li><strong><code class="command">npx ngh --dir=dist/[PROJECTNAME]</code></strong> - Verificar la url del repositorio remoto</li>
 
         </ol>
 
