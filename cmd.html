@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia con CMD</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <center><h1><strong style="color: red;">Rmdir</strong> : Delete directory from command line</h1></center>
+
+    <hr>
+
+    <p>Do you want to delete a directory from Windows command prompt(CMD)? This post explains how to use the command rmdir to delete folders and their contents. You can also find examples for each use case of folder deletion – empty folders, non empty folders, folders with white spaced names etc.</p>
+
+    <div>
+
+        <h3>Delete folder from CMD</h3>
+
+        <p>Run the command <code class="keyWord">rmdir</code> on the folder.</p>
+
+        <pre style="font-family: Consolas; background-color: #eee; padding: 17px 17px 17px 11px; border-left: 7px solid rgba(0,0,0,.15);">rmdir [directoryname]</pre>
+
+        <p>Example: </p>
+
+        <pre class="exCode">C:&gt;rmdir [emptydir]
+C:&gt;</pre>
+
+        <br>
+
+        <h3>How to delete a non empty folder</h3>
+
+        <p>The simple <code class="keyWord">rmdir</code> does not work for folders having some content.</p>
+
+        <pre class="exCode">C:>rmdir [nonemptydir]
+The directory is not empty.</pre>
+
+        <p>Use <code class="keyWord">/s</code> option to delete the folder contents along with the folder. This deletes all subfolders recursively.</p>
+
+        <pre class="exCode">C:>rmdir /S nonemptydir 
+[nonemptydir], Are you sure (Y/N)? y  
+C:></pre>
+
+        <br>
+
+        <h3>Force delete a folder without confirmation</h3>
+
+        <p>To  force delete directory, without being asked for confirmation, we can use /Q switch.</p>
+
+        <pre class="exCode">rmdir /Q /S nonemptydir</pre>
+
+        <p>We can also use ‘rd’ in place of ‘rmdir‘. Both names refer to the same command. This command works on Windows 2000, Windows XP, Server 2003, Vista, Windows 7 and 10.</p>
+
+        <br>
+
+        <h3>Deleting directory with white spaces in the name</h3>
+
+        <p><code class="keyWord">Rmdir</code> can delete files with whitespaces in the name, you just need to wrap up the folder name in double quotes as shown in the below example.</p>
+
+        <pre class="exCode">rmdir /Q /S "folder with spaces in the name"</pre>
+
+        <br>
+
+        <h3>Delete contents of a directory but keep the directory</h3>
+
+        <p>The usecase here is to delete all the contents of the directory but keep the parent directory so that we do not need to create it again. rmdir /Q /S does not work here as it deletes the parent directory too. Rather the below commands should do the trick.</p>
+
+        <pre class="exCode">forfiles /P directory_path /M * /C "cmd /c if @isdir==FALSE del @file"
+forfiles /P directory_path /M * /C "cmd /c if @isdir==TRUE rmdir /S /Q @file"</pre>
+
+        <p>This works in 2 steps – the first command deletes all files, whereas the second one deletes all subdirectories.</p>
+
+        <h4>Errors</h4>
+
+        <p>To delete a directory, you should have appropriate access permissions on the directory. Otherwise rmdir throws ‘Access denied’ error.</p>
+
+    </div>
+
+</body>
+</html>
