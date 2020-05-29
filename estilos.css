@@ -65,6 +65,21 @@ button.btnMode.active::after{
     left: unset;
 }
 
+.keyWord{
+    font-family: Consolas; 
+    background-color: rgba(0,0,0,.08); 
+    padding: 4px 5px; 
+    border-radius: 7px; 
+    margin: 0 1px;
+}
+
+.exCode {
+    font-family: Consolas,Menlo,Monaco,Courier,Verdana,sans-serif;
+    background-color: #eee;
+    padding: 17px 17px 17px 11px;
+    border-left: 7px solid rgba(0,0,0,.15);
+}
+
 @media(max-width: 768px){
     button.btnMode{
         right:0px;
