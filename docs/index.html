@@ -25,9 +25,23 @@
 
         <ol>
 
-            <li><code class="command"><strong> git config --global -e</strong></code> - <strong>Ver configuraciones globales:</strong> 
-                Éste comando abrirá un editor por defecto, y nos mostrará las configuraciones globales que le hemos pasado a git (nombre de usuario, email, alias creados, etc..)
-                Para salirnos del editor abierto (Vi), presionamos las teclas: <code><strong>:</strong> + <strong>q</strong></code>
+            <li><code class="command"><strong> git config --global user.name</strong></code> <code class="command"><strong> git config --global user.email</strong></code> - <strong>Configuraciones globales de identidad para git:</strong> Si es primera vez que se empieza a utilizar git, lo primero que se debe hacer es asignar las credenciales para que git sepa quienes somos, y a la hora de hacer commits en conjunto, saber quién hizo qué cambio...
+            
+            <br>
+
+            Para hacer ésto, empezamos asignando un nombre de usuario y un correo electrónico:
+
+            <br><br>
+
+            <code class="command">git config --global user.name "userName"</code>
+            <br><br>
+            <code class="command">git config --global user.email "userEmail"</code>
+
+            <br><br>
+
+            <li><code class="command"><strong> git config --global -e</strong></code> - <strong>Ver configuraciones globales:</strong> Éste comando abrirá un editor por defecto, y nos mostrará las configuraciones globales que le hemos pasado a git (nombre de usuario, email, alias creados, etc..)
+                <br>
+                Para salirnos del editor abierto (Vi), presionamos las teclas: <code><strong>:q</strong></code>
             </u>.</strong>
 
             <br><br>

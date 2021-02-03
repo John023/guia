@@ -5,10 +5,11 @@ body{
     transition: .3s ease all;
 }
 body.dark{
+    /* background-color: #121a21; */
     /* background-color: #17191a; */
-    /* background-color: #161814; */
+    background-color: #161814;
     /* background-color: #1a171a; */
-    background-color: #07080a;
+    /* background-color: #07080a; */
     /* background-color: #000; */
     color: rgb(247, 223, 223);
 }
